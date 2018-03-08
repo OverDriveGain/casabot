@@ -1,7 +1,8 @@
 # casabot
-Bot to send invitation requests to housing advertisers. You only have to edit your contact parameters in the same file and run it with: 
-#./python3 checkEmail.py. 
-
+Bot to send invitation requests to housing advertisers. You only have to edit your contact parameters in the same file and run it with:
+<br/> 
+./python3 checkEmail.py. 
+<br>
 #Prerequirties: 
 you receive the filtered housing advertisment to your email.
 
