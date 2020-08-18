@@ -29,7 +29,7 @@ def writeInfo(x):
 
 	
 def doThis(URL):
-	internetspeed=20.0	#speed between displaying the email
+	internetspeed=10.0	#speed between displaying the email
 	webbrowser.get('firefox').open_new_tab(URL)
 	time.sleep(internetspeed)	
 	out=True
@@ -38,21 +38,9 @@ def doThis(URL):
 #			out=True
 	if out:
 		pyautogui.press('tab')
+		pyautogui.press('tab')
 		writeBewerbung()
 		pyautogui.press('tab')
-		pyautogui.press('down')
-		pyautogui.press('tab')
-		writeInfo('name')
-		pyautogui.press('tab')
-		writeInfo('family')
-		pyautogui.press('tab')
-		writeInfo('email')
-		pyautogui.press('tab')
-		writeInfo('phone')
-		pyautogui.press('tab')
-		pyautogui.press('tab')
-		pyautogui.press('tab')
-		pyautogui.press('space')
 		pyautogui.press('enter')
 		time.sleep(2)
 	return out

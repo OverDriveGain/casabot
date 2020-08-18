@@ -13,6 +13,7 @@ LAST_EMAIL_FILE='.last'
 WG_IDS_FILE='.wgids'
 EMAIL_TITLE='zu Ihrem Suchauftrag gefunden' # emails notification has this title
 LINKS_SCHEMA='suchauftrag_detail'	#to grab the ad's id from the received email.
+EMAILS_BACK = 1
 def extract_ids(msg):
 	
                     
@@ -49,7 +50,7 @@ def read_mail():
                           print("no New Email")
         infile.close()
         if(first_email_id==1):	#when runing the first time
-                first_email_id=latest_email_id-30
+                first_email_id=latest_email_id-EMAILS_BACK
         for i in range(latest_email_id,first_email_id, -1):		
             typ, data = mail.fetch(str(i),'(RFC822)')
             for response_part in data:

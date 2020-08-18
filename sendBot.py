@@ -1,3 +1,4 @@
+from curl import getLink
 from doer import doThis
 SEND_MSG_URL='https://www.wg-gesucht.de/nachricht-senden.html?message_ad_id='
 ALREADY_SENT_SYMBOLE='x'
@@ -29,5 +30,5 @@ def read_file():
 			print(idset[i])
 		else:
 #			x=urllib2.urlopen(''.join([SEND_MSG_URL,idset[i]])).read()
-			if doThis(''.join([SEND_MSG_URL,idset[i]])):
+			if doThis(getLink(idset[i])):
 				rewrite_file(idset[i])	#this means mark wg id as sent.
