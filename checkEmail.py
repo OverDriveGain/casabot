@@ -5,8 +5,8 @@ import email
 from sendBot import read_file
 #configured to process email notifications from wg-gesucht.de
 ORG_EMAIL   = "@gmail.com"
-FROM_EMAIL  = "manar.zaboub" + ORG_EMAIL
-FROM_PWD    = "manarzaboubpassword"
+FROM_EMAIL  = "manar.zaboub.wg.suche" + ORG_EMAIL
+FROM_PWD    = ""
 SMTP_SERVER = "imap.gmail.com"
 SMTP_PORT   = 993
 LAST_EMAIL_FILE='.last'
@@ -28,6 +28,7 @@ def extract_ids(msg):
 			infile.write(i)
 			infile.write('\n')
 def read_mail():
+    new = False
     try:
         mail = imaplib.IMAP4_SSL(SMTP_SERVER)
         mail.login(FROM_EMAIL,FROM_PWD)
