@@ -13,7 +13,7 @@ LAST_EMAIL_FILE='.last'
 WG_IDS_FILE='.wgids'
 EMAIL_TITLE='zu Ihrem Suchauftrag gefunden' # emails notification has this title
 LINKS_SCHEMA='suchauftrag_detail'	#to grab the ad's id from the received email.
-EMAILS_BACK = 1
+EMAILS_BACK = 30
 def extract_ids(msg):
 	
                     
